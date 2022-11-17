@@ -1,0 +1,18 @@
+name: "Deploy Nextjs to Server"
+description: " "
+author: "Ezequiel Garcia"
+branding:
+  icon: circle
+  color: blue
+inputs:
+  oc_version:
+    description: |
+      "oc version to install. It can be a version (eg. 4.6) or a URL pointing to an oc download.
+      If left blank, the latest oc is installed."
+    default: "latest"
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - name: Get repository content
+      uses: actions/checkout@v3
